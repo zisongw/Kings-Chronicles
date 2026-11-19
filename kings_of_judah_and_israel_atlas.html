@@ -115,6 +115,7 @@
 
     /* hatch fills for tributaries live in the territory SVG */
     .terr-hatch { fill-opacity: 1 !important; }
+    #detail-panel.is-collapsed { padding-top: 6px !important; padding-bottom: 6px !important; }
 
     body.lang-zh .only-en { display: none !important; }
     body.lang-en .only-zh { display: none !important; }
@@ -1567,7 +1568,7 @@ const NOTES = [
      1. STATE
      ========================================================================= */
   const state = {
-    lang: 'en', era: 1, step: 0, tab: 'eras', sel: { type: 'era', id: 1 },
+    lang: 'en', era: 1, step: 0, detailOpen: true, tab: 'eras', sel: { type: 'era', id: 1 },
     layers: { terr: true, wars: true, routes: true, places: true },
     relief: false, autoTimer: null, sidebar: true,
     legendOpen: window.innerWidth >= 768, neStatus: 'loading'
@@ -2196,8 +2197,10 @@ const NOTES = [
   const yearOf = (txt) => { const m = String(txt).match(/\d{3,4}/); return m ? +m[0] : 0; };
   function setEraAt(y) { const id = eraForYear(y); setEra(id, stepForYear(id, y)); }
 
-  function select(sel, doFly) {
+  const TAB_OF = { era: 'eras', king: 'kings', war: 'wars', prophet: 'prophets', other: 'prophets' };
+  function select(sel, doFly, fromStep) {
     state.sel = sel;
+    if (!fromStep || TAB_OF[sel.type] === state.tab) state.detailOpen = true;
     let latlng = null, zoom = 8;
     if (sel.type === 'era') {
       setEra(sel.id, sel.step || 0); setSelPin(null);
@@ -2417,6 +2420,20 @@ const NOTES = [
         <div class="text-[11.5px] text-[#5c4a35] mb-2.5">${isZh() ? '经文' : 'Scripture'}：${refHTML(p.refs)}</div>
         ${eraChip(eraForYear(p.s))}`;
     }
+    if (!state.detailOpen) {
+      const kind = { era: isZh() ? `第 ${s.id} 时期` : `Period ${s.id}`, king: isZh() ? '君王' : 'King', war: isZh() ? '战役' : 'Battle', prophet: isZh() ? '先知书' : 'Prophet', other: isZh() ? '先知' : 'Prophet' }[s.type];
+      const m = html.match(/<h2[^>]*>([\s\S]*?)<\/h2>/);
+      const title = m ? m[1].replace(/<span[\s\S]*$/, '').replace(/<[^>]+>/g, '').trim() : '';
+      el.classList.add('is-collapsed');
+      el.innerHTML = `<button onclick="window._detail(true)" class="no-rt w-full flex items-center justify-between gap-2 text-left">
+        <span class="min-w-0"><span class="block text-[10.5px] text-[#7a6955]">${kind}</span><span class="block font-serif-atlas font-bold text-[14px] text-[#2b2520] truncate">${title}</span></span>
+        <span class="shrink-0 text-[11px] px-2 py-0.5 rounded border border-[#c8b89c] bg-[#faf6ec] text-[#5c4a35]">${isZh() ? '展开 ▾' : 'Show ▾'}</span></button>`;
+      el.dataset.era = '';
+      hideTip();
+      return;
+    }
+    el.classList.remove('is-collapsed');
+    html = html.replace('justify-between gap-2 mb-1', 'gap-2 mb-1').replace('text-[11px] text-[#6d5f4e] font-medium', 'ml-auto text-[11px] text-[#6d5f4e] font-medium').replace('</div>', `<button onclick="window._detail(false)" class="no-rt shrink-0 text-[11px] px-2 py-0.5 rounded border border-[#c8b89c] bg-[#faf6ec] hover:bg-[#efe5cf] text-[#5c4a35]">${isZh() ? '收起 ▴' : 'Hide ▴'}</button></div>`);
     const keep = s.type === 'era' && el.dataset.era === String(s.id);
     const prevTop = el.scrollTop;
     el.innerHTML = html;
@@ -2643,7 +2660,8 @@ const NOTES = [
   window._war = (n) => { stopAuto(); select({ type: 'war', id: n }, true); };
   window._prophet = (id) => { stopAuto(); select({ type: 'prophet', id }, true); };
   window._other = (id) => { stopAuto(); select({ type: 'other', id }, true); };
-  window._tab = (t) => { state.tab = t; renderTabs(); renderList(false); };
+  window._tab = (t) => { state.tab = t; state.detailOpen = TAB_OF[state.sel.type] === t; renderTabs(); renderDetail(); renderList(false); };
+  window._detail = (open) => { state.detailOpen = open; renderDetail(); };
   window.toggleLanguage = () => { state.lang = isZh() ? 'en' : 'zh'; try { localStorage.setItem('kings-atlas-lang', state.lang); } catch (e) {} applyLanguage(); };
   window.toggleRelief = () => { state.relief = !state.relief; updateButtons(); if (demLayer) demLayer.redraw(); };
   window.mapZoom = (d) => { stopAuto(); if (map) map.setZoom(map.getZoom() + d); };
@@ -2674,12 +2692,12 @@ const NOTES = [
     if (st > e.changes.length) { id = state.era >= ERAS.length ? 1 : state.era + 1; st = 0; fly = true; }
     else if (st < 0) { id = state.era <= 1 ? ERAS.length : state.era - 1; st = eraById(id).changes.length; fly = true; }
     setPresetUI('era');
-    select({ type: 'era', id, step: st }, fly);
+    select({ type: 'era', id, step: st }, fly, true);
     const c = eraById(id).changes[st - 1];
     if (!fly && c && c.at && map && !map.getBounds().pad(-0.12).contains(c.at)) map.flyTo(c.at, Math.max(map.getZoom(), 6), { duration: 0.8 });
   }
   window.stepEra = (d) => { stopAuto(); advance(d); };
-  window._step = (i) => { stopAuto(); setPresetUI('era'); select({ type: 'era', id: state.era, step: i }, false);
+  window._step = (i) => { stopAuto(); setPresetUI('era'); select({ type: 'era', id: state.era, step: i }, false, true);
     const c = eraById(state.era).changes[i - 1]; if (c && c.at && map && !map.getBounds().pad(-0.12).contains(c.at)) map.flyTo(c.at, Math.max(map.getZoom(), 6), { duration: 0.8 }); };
   window.toggleAutoPlay = () => {
     if (state.autoTimer) { stopAuto(); return; }
