@@ -203,11 +203,11 @@
             <span class="only-en">Kings of Judah and Israel: A Chronological Atlas</span>
           </h1>
           <span class="hidden md:inline-block text-[10.5px] font-medium px-2 py-0.5 rounded-full bg-[#e9dec6] text-[#5c4a35] border border-[#c7b698]">
-            <span class="only-zh">列王纪上下 · 1011–586 BC</span><span class="only-en">1–2 Kings · 1011–586 BC</span>
+            <span class="only-zh">列王纪上下 · 公元前1011–586年</span><span class="only-en">1–2 Kings · 1011–586 BC</span>
           </span>
         </div>
         <p class="hidden sm:block font-serif-atlas italic text-[11px] text-[#6a5b49] truncate -mt-0.5">
-          <span class="only-zh">Copernicus DEM (GLO-30) 高程地形 · Natural Earth 1:10m 水系海岸线 · 疆域以经文为准</span>
+          <span class="only-zh">哥白尼 DEM（GLO-30）高程地形 · 自然地球 1:10m 水系海岸线 · 疆域以经文为准</span>
           <span class="only-en">Copernicus DEM (GLO-30) relief · Natural Earth 1:10m coastline &amp; hydrology · borders set by Scripture</span>
         </p>
       </div>
@@ -220,7 +220,7 @@
       </div>
       <div class="flex items-center gap-1 sm:gap-1.5">
         <button id="btn-relief" onclick="toggleRelief()" class="px-2 py-1 sm:px-2.5 sm:py-1.5 rounded-lg border border-[#8b7b65] bg-[#faf6ec] hover:bg-[#efe5cf] text-[11px] sm:text-xs font-semibold text-[#2b2520]">Relief +</button>
-        <button id="btn-lang-toggle" onclick="toggleLanguage()" class="flex items-center rounded-lg border border-[#8b7b65] bg-[#ede3cc] p-0.5 text-[11px] sm:text-xs font-semibold shadow-sm hover:border-[#5c4a35]" title="切换中英文 / Switch language">
+        <button id="btn-lang-toggle" onclick="toggleLanguage()" class="flex items-center rounded-lg border border-[#8b7b65] bg-[#ede3cc] p-0.5 text-[11px] sm:text-xs font-semibold shadow-sm hover:border-[#5c4a35]" title="Switch to Chinese">
           <span id="lang-pill-zh" class="px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-md text-[#3b3228]">中文</span>
           <span id="lang-pill-en" class="px-1.5 sm:px-2 py-0.5 sm:py-1 rounded-md bg-[#2b2520] text-[#faf6ec]">EN</span>
         </button>
@@ -261,7 +261,7 @@
       </div>
 
       <div id="data-status-pill" class="hidden sm:flex absolute top-3 right-3 z-20 atlas-legend-glass rounded-md px-2 py-1 text-[10px] text-[#3d3328] flex-col gap-0.5 max-w-[220px] legend-text-halo">
-        <div class="flex items-center gap-1.5"><span id="dot-dem" class="w-2 h-2 rounded-full bg-emerald-600 shrink-0"></span><span class="font-semibold">Copernicus DEM (GLO-30)</span></div>
+        <div class="flex items-center gap-1.5"><span id="dot-dem" class="w-2 h-2 rounded-full bg-emerald-600 shrink-0"></span><span class="font-semibold"><span class="only-zh">哥白尼 DEM（GLO-30）</span><span class="only-en">Copernicus DEM (GLO-30)</span></span></div>
         <div class="flex items-center gap-1.5"><span id="dot-ne" class="w-2 h-2 rounded-full bg-amber-500 animate-pulse shrink-0"></span><span id="text-ne"></span></div>
       </div>
 
@@ -623,12 +623,12 @@ const ERAS = [
       { y:854, yr:'c. 853', at:[31.950,35.930],
         t:{zh:'亚扪人与摩押人联合攻打约沙法',en:'Ammon and Moab attack Jehoshaphat'},
         b:{zh:'摩押人和亚扪人，又有米乌尼人，一同来攻击约沙法；后自相击杀 [[2Ch 20:1]]；[[2Ch 20:22-23]]',en:'Moabites and Ammonites with the Meunites come against Jehoshaphat and destroy one another [[2Ch 20:1]]; [[2Ch 20:22-23]]'},
-        ext:{zh:'Kurkh 碑所列“巴沙”或为亚扪王（读法有争议）',en:'A “Baasha” on the Kurkh Monolith may be Ammonite (reading disputed)'},
+        ext:{zh:'库尔赫碑所列“巴沙”或为亚扪王（读法有争议）',en:'A “Baasha” on the Kurkh Monolith may be Ammonite (reading disputed)'},
         set:[S('AMMON','ammon','own','亚扪','AMMON')] },
       { y:853, yr:'853', at:[35.790,36.350],
         t:{zh:'夸夸尔战役：哈马、大马士革、以色列联军抗亚述',en:'Qarqar: Hamath, Damascus and Israel against Assyria'},
         b:{zh:'经文未载此役；基列拉末此时仍在亚兰手中 [[1Ki 22:3]]',en:'Scripture does not record the battle; Ramoth-gilead is still in Aram’s hands [[1Ki 22:3]]'},
-        ext:{zh:'Kurkh 碑：哈马王 Irhuleni、大马士革王哈大底谢与亚哈合兵抗撒缦以色三世',en:'Kurkh Monolith: Irhuleni of Hamath, Hadadezer of Damascus and Ahab against Shalmaneser III'},
+        ext:{zh:'库尔赫碑：哈马王 伊尔胡勒尼、大马士革王哈大底谢与亚哈合兵抗撒缦以色三世',en:'Kurkh Monolith: Irhuleni of Hamath, Hadadezer of Damascus and Ahab against Shalmaneser III'},
         set:[S('HAMATH','hamath','own','哈马','HAMATH')] },
       { y:852, yr:'c. 852', at:[31.181,35.703],
         t:{zh:'亚哈死后摩押背叛',en:'Moab revolts after Ahab’s death'},
@@ -749,7 +749,7 @@ const ERAS = [
       { y:733.5, yr:'c. 734', at:[31.950,35.930],
         t:{zh:'周边诸邦向亚述进贡',en:'The neighbouring states pay tribute to Assyria'},
         b:{zh:'经文未载诸邦向亚述进贡之事',en:'Scripture does not record their tribute'},
-        ext:{zh:'提革拉毗列色三世进贡名单：亚扪、摩押、以东（Qaush-malaku）、亚实基伦、迦萨、推罗，并犹大王亚哈斯',en:'Tiglath-pileser III’s tribute list: Ammon, Moab, Edom (Qaush-malaku), Ashkelon, Gaza, Tyre — and Ahaz of Judah'},
+        ext:{zh:'提革拉毗列色三世进贡名单：亚扪、摩押、以东（高什马拉库）、亚实基伦、迦萨、推罗，并犹大王亚哈斯',en:'Tiglath-pileser III’s tribute list: Ammon, Moab, Edom (Qaush-malaku), Ashkelon, Gaza, Tyre — and Ahaz of Judah'},
         set:[S('PHIL','phil','own','非利士','PHILISTIA',{vassal:'assyria'}), S('MOAB','moab','own','摩押','MOAB',{vassal:'assyria'}),
              S('AMMON','ammon','own','亚扪','AMMON',{vassal:'assyria'}), S('EDOM','edom','own','以东','EDOM',{vassal:'assyria'}),
              S('ELATH','edom','own','','',{vassal:'assyria'}), S('PHOEN','phoen','own','推罗、西顿','TYRE · SIDON',{vassal:'assyria'})] },
@@ -1184,7 +1184,7 @@ const KINGS = [
     reign:{zh:'22年 [[1Ki 16:29]]',en:'22 yrs [[1Ki 16:29]]'},
     parent:{zh:'暗利之子；妻耶洗别（西顿王谒巴力之女）',en:'Son of Omri; wife Jezebel daughter of Ethbaal of Sidon'},
     sync:{zh:'亚撒第38年 [[1Ki 16:29]]',en:'38th year of Asa [[1Ki 16:29]]'},
-    events:{zh:'在撒玛利亚建巴力庙；以利亚：旱灾、迦密山；与便哈达争战；拿伯的葡萄园；853 BC 夸夸尔战役（亚述 Kurkh 碑）；死于基列拉末。',
+    events:{zh:'在撒玛利亚建巴力庙；以利亚：旱灾、迦密山；与便哈达争战；拿伯的葡萄园；853 BC 夸夸尔战役（亚述库尔赫碑）；死于基列拉末。',
             en:'Builds a temple of Baal in Samaria; Elijah: the drought and Mount Carmel; wars with Ben-hadad; Naboth’s vineyard; Battle of Qarqar 853 BC (Assyrian Kurkh Monolith); dies at Ramoth-gilead.'},
     refs:'1Ki 16:29-22:40' },
   { id:'i8', realm:'i', n:8, dyn:4, zh:'亚哈谢', en:'Ahaziah', s:853, e:852, yrs:'853–852', cap:'samaria', verdict:'evil',
@@ -1194,7 +1194,7 @@ const KINGS = [
     events:{zh:'从楼上栏杆坠下，求问以革伦神巴力西卜；以利亚宣告他必死。',
             en:'Falls through the lattice of his upper room and inquires of Baal-zebub, god of Ekron; Elijah announces his death.'},
     refs:'1Ki 22:51-53; 2Ki 1' },
-  { id:'i9', realm:'i', n:9, dyn:4, zh:'约兰', en:'Joram', alt:{zh:'亦作 Jehoram',en:'also Jehoram'}, s:852, e:841, yrs:'852–841', cap:'samaria', verdict:'evil',
+  { id:'i9', realm:'i', n:9, dyn:4, zh:'约兰', en:'Joram', alt:{zh:'与犹大王约兰同名',en:'also Jehoram'}, s:852, e:841, yrs:'852–841', cap:'samaria', verdict:'evil',
     reign:{zh:'12年 [[2Ki 3:1]]',en:'12 yrs [[2Ki 3:1]]'},
     parent:{zh:'亚哈之子、亚哈谢之弟（亚哈谢无子）',en:'Son of Ahab, brother of Ahaziah (who had no son)'},
     sync:{zh:'约沙法第18年 [[2Ki 3:1]]；犹大约兰第2年 [[2Ki 1:17]]',en:'18th year of Jehoshaphat [[2Ki 3:1]]; 2nd year of Jehoram of Judah [[2Ki 1:17]]'},
@@ -1214,7 +1214,7 @@ const KINGS = [
     sync:{zh:'犹大约阿施第23年 [[2Ki 13:1]]',en:'23rd year of Joash of Judah [[2Ki 13:1]]'},
     events:{zh:'被亚兰王哈薛与便哈达压制；恳求耶和华，神赐一位拯救者。',en:'Oppressed by Hazael and Ben-hadad of Aram; he entreats Yahweh, who gives Israel a deliverer.'},
     refs:'2Ki 13:1-9' },
-  { id:'i12', realm:'i', n:12, dyn:5, zh:'约阿施', en:'Jehoash', alt:{zh:'亦作 Joash',en:'also Joash'}, s:798, e:782, yrs:'798–782', cap:'samaria', verdict:'evil',
+  { id:'i12', realm:'i', n:12, dyn:5, zh:'约阿施', en:'Jehoash', alt:{zh:'与犹大王约阿施同名',en:'also Joash'}, s:798, e:782, yrs:'798–782', cap:'samaria', verdict:'evil',
     reign:{zh:'16年 [[2Ki 13:10]]',en:'16 yrs [[2Ki 13:10]]'},
     parent:{zh:'约哈斯之子',en:'Son of Jehoahaz'},
     sync:{zh:'犹大约阿施第37年 [[2Ki 13:10]]',en:'37th year of Joash of Judah [[2Ki 13:10]]'},
@@ -1305,7 +1305,7 @@ const WARS = [
     refs:'1Ki 20' },
   { n:5, era:3, yr:'853', pts:[[35.790,36.350]], route:'shalm853',
     zh:'夸夸尔战役', en:'Battle of Qarqar',
-    d:{zh:'亚哈出战车2000辆，与亚兰等联军抵抗亚述王撒缦以色三世（亚述 Kurkh 碑文；圣经未载）。',en:'Ahab fields 2,000 chariots in a coalition with Aram against Shalmaneser III of Assyria (Kurkh Monolith; not recorded in Scripture).'},
+    d:{zh:'亚哈出战车2000辆，与亚兰等联军抵抗亚述王撒缦以色三世（亚述库尔赫碑文；圣经未载）。',en:'Ahab fields 2,000 chariots in a coalition with Aram against Shalmaneser III of Assyria (Kurkh Monolith; not recorded in Scripture).'},
     refs:'' },
   { n:6, era:3, yr:'853', pts:[[32.520,35.990]],
     zh:'基列拉末之战', en:'Ramoth-gilead',
@@ -1390,82 +1390,82 @@ const AUD = {
 
 const PROPHETS = [
   { id:'oba', aud:'nations', s:850, e:840, q:true, yrs:'c. 850–840?', loc:[30.730,35.605],
-    zh:'俄巴底亚书', en:'Obadiah', who:{zh:'小先知 4 · 俄巴底亚',en:'Minor Prophets 4 · Obadiah'},
+    zh:'俄巴底亚', en:'Obadiah', who:{zh:'小先知 4 · 俄巴底亚',en:'Minor Prophets 4 · Obadiah'},
     kings:{zh:'犹大约兰',en:'Jehoram of Judah'}, to:{zh:'以东',en:'Edom'},
     msg:{zh:'以东在耶路撒冷遭难时幸灾乐祸、协助掳掠，必受报应；“耶和华的日子临近万国”，国度必归耶和华。',en:'Edom gloated and joined in plundering Jerusalem in her calamity and will be repaid; the day of Yahweh is near on all the nations, and the kingdom will be Yahweh’s.'},
     key:'Oba 10-15, 21', hist:{zh:'以东背叛（早期说） [[2Ki 8:20-22]]；或指 586 BC',en:'Edom’s revolt (early view) [[2Ki 8:20-22]]; or 586 BC'} },
   { id:'joe', aud:'judah', s:835, e:796, q:true, yrs:'c. 835–796?', loc:[31.778,35.235],
-    zh:'约珥书', en:'Joel', who:{zh:'小先知 2 · 约珥',en:'Minor Prophets 2 · Joel'},
+    zh:'约珥', en:'Joel', who:{zh:'小先知 2 · 约珥',en:'Minor Prophets 2 · Joel'},
     kings:{zh:'约阿施（犹大）',en:'Joash (Judah)'}, to:{zh:'犹大',en:'Judah'},
     msg:{zh:'以蝗灾预表“耶和华的日子”；“你们要撕裂心肠，不撕裂衣服”；应许将灵浇灌凡有血气的（使徒行传2章引用）。',en:'A locust plague foreshadows the day of Yahweh; the call to rend the heart rather than the garments; the promise to pour out the Spirit on all flesh (quoted in Acts 2).'},
     key:'Joe 2:12-13, 28-32; Act 2:16-21', hist:{zh:'约阿施在耶何耶大辅佐期间（早期说） [[2Ki 11-12]]',en:'Joash under Jehoiada’s guidance (early view) [[2Ki 11-12]]'} },
   { id:'jon', aud:'nations', s:790, e:760, yrs:'c. 790–760', loc:[32.740,35.325], loc2:[36.360,43.150],
-    zh:'约拿书', en:'Jonah', who:{zh:'小先知 5 · 约拿，亚米太之子',en:'Minor Prophets 5 · Jonah son of Amittai'},
+    zh:'约拿', en:'Jonah', who:{zh:'小先知 5 · 约拿，亚米太之子',en:'Minor Prophets 5 · Jonah son of Amittai'},
     kings:{zh:'耶罗波安二世',en:'Jeroboam II'}, to:{zh:'尼尼微',en:'Nineveh'},
     msg:{zh:'逃避呼召，被大鱼吞下；尼尼微全城悔改，显明神怜悯外邦；耶稣以“约拿的神迹”预表自己的复活。',en:'He flees God’s call and is swallowed by a great fish; all Nineveh repents, revealing God’s mercy to the nations; Jesus points to the sign of Jonah for His resurrection.'},
     key:'Jon 2; 4:2, 11; Mat 12:40', hist:{zh:'预言耶罗波安二世收复疆界 [[2Ki 14:25]]',en:'Foretold Jeroboam II’s restored border [[2Ki 14:25]]'} },
   { id:'amo', aud:'north', s:762, e:758, yrs:'c. 762–758', loc:[31.634,35.218], loc2:[31.930,35.222],
-    zh:'阿摩司书', en:'Amos', who:{zh:'小先知 3 · 阿摩司，提哥亚牧人',en:'Minor Prophets 3 · Amos, herdsman of Tekoa'},
+    zh:'阿摩司', en:'Amos', who:{zh:'小先知 3 · 阿摩司，提哥亚牧人',en:'Minor Prophets 3 · Amos, herdsman of Tekoa'},
     kings:{zh:'乌西雅、耶罗波安二世',en:'Uzziah, Jeroboam II'}, to:{zh:'以色列',en:'Israel'},
     msg:{zh:'斥责北国富足中的欺压与虚假敬拜；“惟愿公平如大水滚滚，使公义如江河滔滔”；预言被掳；大卫倒塌的帐幕必重新建立。',en:'He denounces oppression and false worship in Israel’s prosperity and calls for justice to roll down like waters and righteousness like an ever-flowing stream; foretells exile; the fallen tabernacle of David will be raised up.'},
     key:'Amo 1:1; 5:24; 7:10-17; 9:11-12', hist:{zh:'耶罗波安二世的鼎盛期 [[2Ki 14:23-29]]',en:'The height of Jeroboam II’s reign [[2Ki 14:23-29]]'} },
   { id:'hos', aud:'north', s:755, e:710, yrs:'c. 755–710', loc:[32.276,35.195],
-    zh:'何西阿书', en:'Hosea', who:{zh:'小先知 1 · 何西阿',en:'Minor Prophets 1 · Hosea'},
+    zh:'何西阿', en:'Hosea', who:{zh:'小先知 1 · 何西阿',en:'Minor Prophets 1 · Hosea'},
     kings:{zh:'耶罗波安二世至希西家',en:'Jeroboam II to Hezekiah'}, to:{zh:'以色列',en:'Israel'},
     msg:{zh:'奉命娶淫妇歌篾，象征神对不忠之以色列的信实之爱；“我喜爱良善，不喜爱祭祀”；“我从埃及召出我的儿子”。',en:'Commanded to marry Gomer, he embodies God’s faithful love for unfaithful Israel; God desires lovingkindness rather than sacrifice; out of Egypt He called His son.'},
     key:'Hos 1-3; 6:6; 11:1', hist:{zh:'耶户家末年至北国灭亡 [[2Ki 15-17]]',en:'From the last of Jehu’s line to the fall of Israel [[2Ki 15-17]]'} },
   { id:'isa', aud:'judah', s:740, e:681, yrs:'c. 740–681', loc:[31.778,35.235],
-    zh:'以赛亚书', en:'Isaiah', who:{zh:'大先知 1 · 以赛亚，亚摩斯之子',en:'Major Prophets 1 · Isaiah son of Amoz'},
+    zh:'以赛亚', en:'Isaiah', who:{zh:'大先知 1 · 以赛亚，亚摩斯之子',en:'Major Prophets 1 · Isaiah son of Amoz'},
     kings:{zh:'乌西雅至希西家',en:'Uzziah to Hezekiah'}, to:{zh:'犹大',en:'Judah'},
     msg:{zh:'以色列的圣者；以马内利；“奇妙策士、全能的神”；受苦的仆人为我们的过犯受害；新天新地。',en:'The Holy One of Israel; Immanuel; the Child called Wonderful Counselor, Mighty God; the suffering Servant wounded for our transgressions; new heavens and a new earth.'},
     key:'Isa 6; 7:14; 9:6; 53; 65:17', hist:{zh:'[[2Ki 18-20]] 与 [[Isa 36-39]] 几乎逐字平行',en:'[[2Ki 18-20]] runs almost word for word with [[Isa 36-39]]'} },
   { id:'mic', aud:'judah', s:735, e:700, yrs:'c. 735–700', loc:[31.600,34.900],
-    zh:'弥迦书', en:'Micah', who:{zh:'小先知 6 · 弥迦，摩利沙人',en:'Minor Prophets 6 · Micah of Moresheth'},
+    zh:'弥迦', en:'Micah', who:{zh:'小先知 6 · 弥迦，摩利沙人',en:'Minor Prophets 6 · Micah of Moresheth'},
     kings:{zh:'约坦、亚哈斯、希西家',en:'Jotham, Ahaz, Hezekiah'}, to:{zh:'犹大、以色列',en:'Judah and Israel'},
     msg:{zh:'斥责撒玛利亚与耶路撒冷首领的不义；掌权者要出于伯利恒；“行公义，好怜悯，存谦卑的心与你的神同行”。',en:'He condemns the injustice of the leaders of Samaria and Jerusalem; the Ruler will come from Bethlehem; what Yahweh requires: to do justice, to love lovingkindness, and to walk humbly with God.'},
     key:'Mic 1:1; 5:2; 6:8', hist:{zh:'其预言促成希西家悔改 [[Jer 26:18-19]]',en:'His warning moved Hezekiah to repent [[Jer 26:18-19]]'} },
   { id:'nah', aud:'nations', s:660, e:650, yrs:'c. 660–650', loc:[36.360,43.150],
-    zh:'那鸿书', en:'Nahum', who:{zh:'小先知 7 · 那鸿，伊勒歌斯人',en:'Minor Prophets 7 · Nahum the Elkoshite'},
+    zh:'那鸿', en:'Nahum', who:{zh:'小先知 7 · 那鸿，伊勒歌斯人',en:'Minor Prophets 7 · Nahum the Elkoshite'},
     kings:{zh:'玛拿西',en:'Manasseh'}, to:{zh:'尼尼微',en:'Nineveh'},
     msg:{zh:'尼尼微必倾覆（612 BC 应验）；耶和华是忌邪施报的神，也是患难之日的保障。',en:'Nineveh will fall (fulfilled 612 BC); Yahweh is a jealous God who avenges, and a stronghold in the day of trouble.'},
     key:'Nah 1:2-7; 3', hist:{zh:'约拿之后约一百年，亚述再度骄横 [[2Ki 18-19]]',en:'A century after Jonah, Assyria’s arrogance returns [[2Ki 18-19]]'} },
   { id:'zep', aud:'judah', s:635, e:625, yrs:'c. 635–625', loc:[31.778,35.235],
-    zh:'西番雅书', en:'Zephaniah', who:{zh:'小先知 9 · 西番雅，希西家的玄孙',en:'Minor Prophets 9 · Zephaniah, great-great-grandson of Hezekiah'},
+    zh:'西番雅', en:'Zephaniah', who:{zh:'小先知 9 · 西番雅，希西家的玄孙',en:'Minor Prophets 9 · Zephaniah, great-great-grandson of Hezekiah'},
     kings:{zh:'约西亚',en:'Josiah'}, to:{zh:'犹大',en:'Judah'},
     msg:{zh:'“耶和华的大日临近”；谦卑的人要寻求公义；“他必因你欢欣喜乐”。',en:'The great day of Yahweh is near; the humble are to seek righteousness; God will rejoice over His people with gladness.'},
     key:'Zep 1:1, 14-18; 2:3; 3:17', hist:{zh:'约西亚改革前夕 [[2Ki 22-23]]',en:'On the eve of Josiah’s reform [[2Ki 22-23]]'} },
   { id:'jer', aud:'judah', s:627, e:580, yrs:'627–c. 580', loc:[31.811,35.262],
-    zh:'耶利米书 + 耶利米哀歌', en:'Jeremiah + Lamentations', who:{zh:'大先知 2 · 耶利米，亚拿突的祭司',en:'Major Prophets 2 · Jeremiah, priest of Anathoth'},
+    zh:'耶利米', en:'Jeremiah', who:{zh:'大先知 2 · 耶利米，亚拿突的祭司',en:'Major Prophets 2 · Jeremiah, priest of Anathoth'},
     kings:{zh:'约西亚至西底家',en:'Josiah to Zedekiah'}, to:{zh:'犹大',en:'Judah'},
     msg:{zh:'呼召悔改；预言被掳70年；应许另立新约，将律法写在心上；哀歌哀悼耶路撒冷，“他的怜悯不至断绝”。',en:'A call to repentance; seventy years of exile; the promise of a new covenant written on the heart; Lamentations mourns Jerusalem, yet His compassions never fail.'},
     key:'Jer 1:1-10; 25:11; 31:31-34; Lam 3:22-23', hist:{zh:'[[2Ki 22-25]]；[[Jer 52]] 几乎重述 [[2Ki 24:18-25:30]]',en:'[[2Ki 22-25]]; [[Jer 52]] nearly repeats [[2Ki 24:18-25:30]]'} },
   { id:'hab', aud:'judah', s:609, e:605, yrs:'c. 609–605', loc:[31.778,35.235],
-    zh:'哈巴谷书', en:'Habakkuk', who:{zh:'小先知 8 · 哈巴谷',en:'Minor Prophets 8 · Habakkuk'},
+    zh:'哈巴谷', en:'Habakkuk', who:{zh:'小先知 8 · 哈巴谷',en:'Minor Prophets 8 · Habakkuk'},
     kings:{zh:'约雅敬',en:'Jehoiakim'}, to:{zh:'犹大',en:'Judah'},
     msg:{zh:'质问神为何容忍恶人，又兴起迦勒底人施罚；“义人因信得生”；“虽然无花果树不发旺……我要因耶和华欢欣”。',en:'He asks why God tolerates evil and then raises up the Chaldeans; the righteous will live by his faith; even if the fig tree does not blossom, he will exult in Yahweh.'},
     key:'Hab 1:2-6; 2:4; 3:17-19', hist:{zh:'巴比伦兴起 [[2Ki 24:1-7]]',en:'The rise of Babylon [[2Ki 24:1-7]]'} },
   { id:'dan', aud:'exile', s:605, e:536, yrs:'605–536', loc:[32.536,44.421],
-    zh:'但以理书', en:'Daniel', who:{zh:'大先知 4 · 但以理，犹大贵胄',en:'Major Prophets 4 · Daniel, of Judah’s nobility'},
+    zh:'但以理', en:'Daniel', who:{zh:'大先知 4 · 但以理，犹大贵胄',en:'Major Prophets 4 · Daniel, of Judah’s nobility'},
     kings:{zh:'约雅敬起，至波斯王古列',en:'From Jehoiakim to Cyrus of Persia'}, to:{zh:'被掳之地',en:'The exiles'},
     msg:{zh:'神掌管列国兴衰：尼布甲尼撒梦中的大像、狮子坑、四兽与人子、七十个七。',en:'God rules the rise and fall of kingdoms: Nebuchadnezzar’s statue, the lions’ den, the four beasts and the Son of Man, the seventy weeks.'},
     key:'Dan 1:1-6; 2; 6; 7:13-14; 9:24-27', hist:{zh:'605 BC 第一批被掳 [[2Ki 24:1]]；[[Dan 1:1]]',en:'First deportation, 605 BC [[2Ki 24:1]]; [[Dan 1:1]]'} },
   { id:'eze', aud:'exile', s:593, e:571, yrs:'593–571', loc:[32.150,45.230],
-    zh:'以西结书', en:'Ezekiel', who:{zh:'大先知 3 · 以西结，祭司',en:'Major Prophets 3 · Ezekiel, priest'},
+    zh:'以西结', en:'Ezekiel', who:{zh:'大先知 3 · 以西结，祭司',en:'Major Prophets 3 · Ezekiel, priest'},
     kings:{zh:'约雅斤被掳之后',en:'After Jehoiachin’s exile'}, to:{zh:'被掳之地',en:'The exiles'},
     msg:{zh:'在迦巴鲁河边见神的荣耀；荣耀离开圣殿；守望者的责任；枯骨复生；新圣殿与荣耀归回。',en:'He sees God’s glory by the Kebar canal; the glory departs the temple; the watchman’s duty; the valley of dry bones; a new temple and the glory’s return.'},
     key:'Eze 1; 10; 33:7; 37; 43:1-5', hist:{zh:'597 BC 与约雅斤同被掳 [[2Ki 24:10-16]]',en:'Deported with Jehoiachin in 597 BC [[2Ki 24:10-16]]'} },
   { id:'hag', aud:'ret', s:520, e:520, yrs:'520', loc:[31.778,35.235],
-    zh:'哈该书', en:'Haggai', who:{zh:'小先知 10 · 哈该',en:'Minor Prophets 10 · Haggai'},
+    zh:'哈该', en:'Haggai', who:{zh:'小先知 10 · 哈该',en:'Minor Prophets 10 · Haggai'},
     kings:{zh:'波斯王大利乌一世',en:'Darius I of Persia'}, to:{zh:'归回余民',en:'The returned remnant'},
     msg:{zh:'催促归回者先建造圣殿；“这殿后来的荣耀必大过先前的荣耀”。',en:'He urges the returned exiles to rebuild the temple first; the latter glory of this house will be greater than the former.'},
     key:'Hag 1:4-8; 2:9', hist:{zh:'列王纪之后：[[Ezr 5:1]]；[[Ezr 6:14]]，圣殿于 516 BC 落成',en:'After Kings: [[Ezr 5:1]]; [[Ezr 6:14]]; the temple completed 516 BC'} },
   { id:'zec', aud:'ret', s:520, e:480, yrs:'520–c. 480', loc:[31.778,35.235],
-    zh:'撒迦利亚书', en:'Zechariah', who:{zh:'小先知 11 · 撒迦利亚，易多的孙子',en:'Minor Prophets 11 · Zechariah, grandson of Iddo'},
+    zh:'撒迦利亚', en:'Zechariah', who:{zh:'小先知 11 · 撒迦利亚，易多的孙子',en:'Minor Prophets 11 · Zechariah, grandson of Iddo'},
     kings:{zh:'大利乌一世',en:'Darius I'}, to:{zh:'归回余民',en:'The returned remnant'},
     msg:{zh:'八个夜间异象；大祭司约书亚与所罗巴伯；“不是倚靠势力，不是倚靠才能，乃是倚靠我的灵”；弥赛亚骑驴进城；他们必仰望那被扎的。',en:'Eight night visions; Joshua the high priest and Zerubbabel; not by might nor by power, but by God’s Spirit; the Messiah comes riding on a donkey; they will look on Him whom they pierced.'},
     key:'Zec 1:1; 4:6; 9:9; 12:10', hist:{zh:'列王纪之后：[[Ezr 5:1]]；[[Ezr 6:14]]',en:'After Kings: [[Ezr 5:1]]; [[Ezr 6:14]]'} },
   { id:'mal', aud:'ret', s:433, e:424, yrs:'c. 433–424', loc:[31.778,35.235],
-    zh:'玛拉基书', en:'Malachi', who:{zh:'小先知 12 · 玛拉基',en:'Minor Prophets 12 · Malachi'},
+    zh:'玛拉基', en:'Malachi', who:{zh:'小先知 12 · 玛拉基',en:'Minor Prophets 12 · Malachi'},
     kings:{zh:'尼希米时期',en:'Nehemiah’s time'}, to:{zh:'归回余民',en:'The returned remnant'},
     msg:{zh:'斥责祭司藐视祭坛、百姓夺取什一与轻易休妻；应许在耶和华大日之前差遣以利亚。',en:'He rebukes priests who despise the altar and a people who rob God of tithes and divorce lightly; Elijah will be sent before the great day of Yahweh.'},
     key:'Mal 1:6-8; 3:1, 8-10; 4:5-6', hist:{zh:'列王纪之后：[[Neh 13]]；新约以施洗约翰应验 [[Mat 11:14]]',en:'After Kings: [[Neh 13]]; fulfilled in John the Baptist [[Mat 11:14]]'} }
@@ -1499,16 +1499,16 @@ const OTHER_PROPHETS = [
    ========================================================================= */
 const NOTES = [
   { t:{zh:'年代锚点：出埃及与建殿',en:'Anchor: the Exodus and the Temple'},
-    b:{zh:'<p>以 [[1Ki 6:1]] 为桥：所罗门第4年（966 BC）往回480年即出埃及。</p>$$\\text{Exodus} = 966 + 480 = 1446\\ \\text{BC}$$<p>MacArthur 研读本作约 1445 BC，与 1446 BC 之差只是含首／不含首的算法，不影响任何一位王的年代。示撒入侵（罗波安第5年）常规认作示撒克一世 Shoshenq I，约 926/925 BC。</p>',
-       en:'<p>[[1Ki 6:1]] is the bridge: 480 years before Solomon’s 4th year (966 BC) is the Exodus.</p>$$\\text{Exodus} = 966 + 480 = 1446\\ \\text{BC}$$<p>The MacArthur Study Bible gives c. 1445 BC; the one-year difference is only inclusive vs exclusive counting and moves no king’s dates. Shishak (Rehoboam’s 5th year) is conventionally Shoshenq I, c. 926/925 BC.</p>'} },
+    b:{zh:'<p>以 [[1Ki 6:1]] 为桥：所罗门第4年（966 BC）往回480年即出埃及。</p>$$\\text{出埃及年} = 966 + 480 = 1446$$<p>《麦克阿瑟研读本圣经》作约 1445 BC，与 1446 BC 之差只是含首／不含首的算法，不影响任何一位王的年代。示撒入侵（罗波安第5年）常规认作埃及法老示申克一世，约 926/925 BC。</p>',
+       en:'<p>[[1Ki 6:1]] is the bridge: 480 years before Solomon’s 4th year (966 BC) is the Exodus.</p>$$\\text{Exodus year} = 966 + 480 = 1446\\ \\text{BC}$$<p>The MacArthur Study Bible gives c. 1445 BC; the one-year difference is only inclusive vs exclusive counting and moves no king’s dates. Shishak (Rehoboam’s 5th year) is conventionally Shoshenq I, c. 926/925 BC.</p>'} },
   { t:{zh:'亚述与巴比伦的外部锚点',en:'Assyrian and Babylonian Anchors'},
-    b:{zh:'<ul><li><b>853 BC 夸夸尔战役</b>：亚哈列于撒缦以色三世的敌军（Kurkh 碑），即亚哈末年。</li><li><b>841 BC</b>：耶户向撒缦以色三世纳贡（黑色方尖碑），即耶户元年。853→841 正好容纳亚哈谢2年 + 约兰12年（非登基年制，实为 1 + 11）。</li><li><b>701 BC</b> 西拿基立攻犹大 = 希西家第14年 [[2Ki 18:13]]，故希西家独治始于 715 BC；加寿15年 [[2Ki 20:6]] 至 686 BC。</li><li><b>597 BC</b>（3月）巴比伦编年史记耶路撒冷被攻取 = 尼布甲尼撒第8年 [[2Ki 24:12]]。</li></ul>',
+    b:{zh:'<ul><li><b>853 BC 夸夸尔战役</b>：亚哈列于撒缦以色三世的敌军（库尔赫碑），即亚哈末年。</li><li><b>841 BC</b>：耶户向撒缦以色三世纳贡（黑色方尖碑），即耶户元年。853→841 正好容纳亚哈谢2年 + 约兰12年（非登基年制，实为 1 + 11）。</li><li><b>701 BC</b> 西拿基立攻犹大 = 希西家第14年 [[2Ki 18:13]]，故希西家独治始于 715 BC；加寿15年 [[2Ki 20:6]] 至 686 BC。</li><li><b>597 BC</b>（3月）巴比伦编年史记耶路撒冷被攻取 = 尼布甲尼撒第8年 [[2Ki 24:12]]。</li></ul>',
        en:'<ul><li><b>853 BC, Qarqar</b>: Ahab appears among Shalmaneser III’s enemies (Kurkh Monolith) — Ahab’s last year.</li><li><b>841 BC</b>: Jehu pays tribute to Shalmaneser III (Black Obelisk) — Jehu’s first year. 853→841 exactly fits Ahaziah’s 2 + Joram’s 12 years (non-accession counting, really 1 + 11).</li><li><b>701 BC</b>: Sennacherib’s campaign = Hezekiah’s 14th year [[2Ki 18:13]], so his sole reign began 715 BC; with 15 added years [[2Ki 20:6]] he dies 686 BC.</li><li><b>597 BC</b> (March): the Babylonian Chronicle records Jerusalem’s capture = Nebuchadnezzar’s 8th year [[2Ki 24:12]].</li></ul>'} },
   { t:{zh:'计年法则',en:'Reckoning Conventions'},
     b:{zh:'<ul><li><b>登基年制</b>：新王即位当年的余月不算；<b>非登基年制</b>：新王首年与前王末年重复计算。犹大多用前者，以色列早期用后者。[[2Ki 8:25]] 的“第12年”与 [[2Ki 9:29]] 的“第11年”就是同一年的两种算法。</li><li><b>共治</b>：父子同时在位，年数重叠计算。</li><li><b>对立王</b>：两王同时称王，如暗利与提比尼、比加与米拿现。</li><li><b>历年起点</b>：犹大以提斯利月（秋）起年，以色列以尼散月（春）起年，故年代常写作 931/930。</li></ul>',
        en:'<ul><li><b>Accession-year</b>: the remainder of a new king’s first calendar year is not counted; <b>non-accession-year</b>: that year is counted for both kings. Judah mostly used the former, early Israel the latter. The “12th year” of [[2Ki 8:25]] and the “11th year” of [[2Ki 9:29]] are the same year counted two ways.</li><li><b>Coregency</b>: father and son reign together and the years overlap.</li><li><b>Rival reign</b>: two claimants at once — Omri and Tibni, Pekah and Menahem.</li><li><b>New year</b>: Judah began the regnal year in Tishri (autumn), Israel in Nisan (spring), hence dates like 931/930.</li></ul>'} },
   { t:{zh:'共治与对立王：年数相加为何多于实际年代',en:'Why the Sum of Reigns Exceeds the Span'},
-    b:{zh:'<p>经文在位年数直接相加，犹大多出约48年，以色列多出约32年，全由下列重叠吸收：</p>$$\\text{Judah: } \\Sigma \\approx 393.5 \\text{ yr} \\quad\\text{vs}\\quad 931-586 = 345 \\text{ yr}$$$$\\text{Israel: } \\Sigma \\approx 241 \\text{ yr} \\quad\\text{vs}\\quad 931-722 = 209 \\text{ yr}$$',
+    b:{zh:'<p>经文在位年数直接相加，犹大多出约48年，以色列多出约32年，全由下列重叠吸收：</p>$$\\text{犹大：}\\ \\Sigma \\approx 393.5\\ \\text{年} \\quad\\text{对比}\\quad 931-586 = 345\\ \\text{年}$$$$\\text{以色列：}\\ \\Sigma \\approx 241\\ \\text{年} \\quad\\text{对比}\\quad 931-722 = 209\\ \\text{年}$$',
        en:'<p>Adding the stated reign lengths gives about 48 extra years for Judah and 32 for Israel; the overlaps below absorb them:</p>$$\\text{Judah: } \\Sigma \\approx 393.5 \\text{ yr} \\quad\\text{vs}\\quad 931-586 = 345 \\text{ yr}$$$$\\text{Israel: } \\Sigma \\approx 241 \\text{ yr} \\quad\\text{vs}\\quad 931-722 = 209 \\text{ yr}$$'},
     table:[
       [{zh:'约沙法 + 亚撒',en:'Jehoshaphat + Asa'},'873–870',{zh:'亚撒第39年脚病 [[2Ch 16:12]]',en:'Asa diseased in his 39th year [[2Ch 16:12]]'}],
@@ -1531,32 +1531,32 @@ const NOTES = [
     table:[
       [{zh:'亚兰（大马士革）',en:'Aram (Damascus)'},{zh:'所罗门年间（分国前）',en:'Under Solomon, before the division'},
        {zh:'利逊据大马士革作王，所罗门一生与以色列为敌 [[1Ki 11:23-25]]；便哈达与两国分别立约 [[1Ki 15:18-19]]',en:'Rezon reigns in Damascus, an adversary all Solomon’s days [[1Ki 11:23-25]]; Ben-hadad treats with each kingdom [[1Ki 15:18-19]]'},
-       {zh:'Kurkh 碑：853 BC 大马士革王哈大底谢领联军；但城碑（约 840 BC）',en:'Kurkh Monolith: Hadadezer of Damascus leads the coalition in 853 BC; Tel Dan Stele (c. 840 BC)'}],
+       {zh:'库尔赫碑：853 BC 大马士革王哈大底谢领联军；但城碑（约 840 BC）',en:'Kurkh Monolith: Hadadezer of Damascus leads the coalition in 853 BC; Tel Dan Stele (c. 840 BC)'}],
       [{zh:'以东',en:'Edom'},{zh:'所罗门年间起反抗；约 848–841 BC 正式独立',en:'Resistance from Solomon’s day; independent c. 848–841 BC'},
        {zh:'哈达回以东作敌 [[1Ki 11:14-22, 25]]；约沙法时由总督治理 [[1Ki 22:47]]；约兰时以东背叛，自己立王 [[2Ki 8:20-22]]；[[2Ch 21:8-10]]',en:'Hadad returns as an adversary [[1Ki 11:14-22, 25]]; under Jehoshaphat ruled by a deputy [[1Ki 22:47]]; under Jehoram Edom revolts and sets up its own king [[2Ki 8:20-22]]; [[2Ch 21:8-10]]'},
-       {zh:'提革拉毗列色三世的进贡名单（约 734 BC）列有以东王 Qaush-malaku',en:'Tiglath-pileser III’s tribute list (c. 734 BC) names Qaush-malaku king of Edom'}],
+       {zh:'提革拉毗列色三世的进贡名单（约 734 BC）列有以东王高什马拉库',en:'Tiglath-pileser III’s tribute list (c. 734 BC) names Qaush-malaku king of Edom'}],
       [{zh:'摩押',en:'Moab'},{zh:'分国时未载；暗利再度制服；约 852 BC 背叛',en:'Not stated at the division; re-subdued by Omri; revolts c. 852 BC'},
        {zh:'米沙向以色列进贡，亚哈死后背叛 [[2Ki 3:4-5]]；[[2Ki 1:1]]',en:'Mesha pays tribute to Israel and rebels after Ahab’s death [[2Ki 3:4-5]]; [[2Ki 1:1]]'},
        {zh:'米沙碑：暗利“多日欺压摩押”，其子在位时米沙复兴摩押',en:'Mesha Stele: Omri oppressed Moab many days; Mesha restored it in his son’s days'}],
       [{zh:'亚扪',en:'Ammon'},{zh:'分国时未载；约 853 BC 前已独立',en:'Not stated at the division; independent by c. 853 BC'},
        {zh:'罗波安之母为亚扪人 [[1Ki 14:21]]；亚扪人攻约沙法 [[2Ch 20:1]]；后向乌西雅、约坦进贡 [[2Ch 26:8]]；[[2Ch 27:5]]',en:'Rehoboam’s mother is an Ammonite [[1Ki 14:21]]; Ammon attacks Jehoshaphat [[2Ch 20:1]]; later tribute to Uzziah and Jotham [[2Ch 26:8]]; [[2Ch 27:5]]'},
-       {zh:'Kurkh 碑所列“巴沙”或为亚扪王（读法有争议）',en:'A “Baasha” on the Kurkh Monolith may be Ammonite (reading disputed)'}],
+       {zh:'库尔赫碑所列“巴沙”或为亚扪王（读法有争议）',en:'A “Baasha” on the Kurkh Monolith may be Ammonite (reading disputed)'}],
       [{zh:'非利士',en:'Philistia'},{zh:'分国后不久（909 BC 前）',en:'Soon after the division (before 909 BC)'},
        {zh:'基比顿属非利士 [[1Ki 15:27]]；[[1Ki 16:15]]；但罗波安仍修筑迦特 [[2Ch 11:8]]，部分非利士人向约沙法进贡 [[2Ch 17:11]]',en:'Gibbethon is Philistine [[1Ki 15:27]]; [[1Ki 16:15]]; yet Rehoboam fortifies Gath [[2Ch 11:8]] and some Philistines bring tribute to Jehoshaphat [[2Ch 17:11]]'},
-       {zh:'示撒克一世卡纳克城镇名录（约 925 BC），行军经沿海平原',en:'Shoshenq I’s Karnak town list (c. 925 BC); route along the coastal plain'}],
+       {zh:'示申克一世卡纳克城镇名录（约 925 BC），行军经沿海平原',en:'Shoshenq I’s Karnak town list (c. 925 BC); route along the coastal plain'}],
       [{zh:'哈马',en:'Hamath'},{zh:'分国时未载',en:'Not stated at the division'},
        {zh:'大卫时哈马王陀以与大卫友好 [[2Sa 8:9-10]]；所罗门攻取哈马琐巴 [[2Ch 8:3-4]]；耶罗波安二世收回哈马 [[2Ki 14:28]]',en:'Toi of Hamath befriends David [[2Sa 8:9-10]]; Solomon prevails over Hamath-zobah [[2Ch 8:3-4]]; Jeroboam II recovers Hamath [[2Ki 14:28]]'},
-       {zh:'Kurkh 碑：853 BC 哈马王 Irhuleni 参加联军；撒刻碑（约 800 BC）',en:'Kurkh Monolith: Irhuleni of Hamath in the 853 BC coalition; Zakkur Stele (c. 800 BC)'}]
+       {zh:'库尔赫碑：853 BC 哈马王 伊尔胡勒尼 参加联军；撒刻碑（约 800 BC）',en:'Kurkh Monolith: Irhuleni of Hamath in the 853 BC coalition; Zakkur Stele (c. 800 BC)'}]
     ] },
   { t:{zh:'经文数字中的难点',en:'Textual Difficulties'},
-    b:{zh:'<ul><li>[[2Ki 17:1]] 何细亚登基于“亚哈斯第12年”：Thiele 视为后期的双重纪年；McFall 与 Rodger Young 主张亚哈斯另有约 744/743 起的共治。</li><li>抄本数字：亚哈谢登基年龄 22岁 [[2Ki 8:26]] 与 42岁 [[2Ch 22:2]]；约雅斤 18岁 [[2Ki 24:8]] 与 8岁 [[2Ch 36:9]]。</li><li>耶路撒冷陷落 586 或 587 BC，取决于尼布甲尼撒第19年按提斯利年或尼散年换算；本表用 586。</li></ul>',
+    b:{zh:'<ul><li>[[2Ki 17:1]] 何细亚登基于“亚哈斯第12年”：蒂勒视为后期的双重纪年；麦克福尔与罗杰·扬主张亚哈斯另有约 744/743 起的共治。</li><li>抄本数字：亚哈谢登基年龄 22岁 [[2Ki 8:26]] 与 42岁 [[2Ch 22:2]]；约雅斤 18岁 [[2Ki 24:8]] 与 8岁 [[2Ch 36:9]]。</li><li>耶路撒冷陷落 586 或 587 BC，取决于尼布甲尼撒第19年按提斯利年或尼散年换算；本表用 586。</li></ul>',
        en:'<ul><li>[[2Ki 17:1]] places Hoshea’s accession in “Ahaz’s 12th year”: Thiele treats it as a later dual dating; McFall and Rodger Young propose an Ahaz coregency from c. 744/743.</li><li>Manuscript numbers: Ahaziah’s age at accession 22 [[2Ki 8:26]] vs 42 [[2Ch 22:2]]; Jehoiachin 18 [[2Ki 24:8]] vs 8 [[2Ch 36:9]].</li><li>Jerusalem fell in 586 or 587 BC depending on whether Nebuchadnezzar’s 19th year is converted on a Tishri or Nisan calendar; this atlas uses 586.</li></ul>'} },
   { t:{zh:'地图与疆域的依据',en:'Basis of the Maps'},
-    b:{zh:'<p>每个时期由“时期开始时的版图”加若干步“版图变化”组成，每一步都列出经文依据，经外史料另行标明。疆域演进以经文所载的城邑、疆界与臣属关系为准；经文未载之处（如亚述省份名称、诸国向亚述进贡）参照亚述与巴比伦铭文，并在各时期的依据中注明。边界为示意，不作精确测绘。</p><p>底图：Copernicus DEM (GLO-30) 高程与山体阴影；Natural Earth 1:10m 海岸线、湖泊与河流。古代海岸线与今日略有差异（如沿海平原的淤积）。</p>',
+    b:{zh:'<p>每个时期由“时期开始时的版图”加若干步“版图变化”组成，每一步都列出经文依据，经外史料另行标明。疆域演进以经文所载的城邑、疆界与臣属关系为准；经文未载之处（如亚述省份名称、诸国向亚述进贡）参照亚述与巴比伦铭文，并在各时期的依据中注明。边界为示意，不作精确测绘。</p><p>底图：哥白尼数字高程模型（GLO-30）的高程与山体阴影；自然地球 1:10m 的海岸线、湖泊与河流。古代海岸线与今日略有差异（如沿海平原的淤积）。</p>',
        en:'<p>Each period opens with its starting map followed by a sequence of territorial changes, each with its scriptural basis and, separately, any extra-biblical evidence. Territories follow the cities, borders and dependencies the biblical text records; where Scripture is silent (Assyrian province names, tribute of neighbouring states) Assyrian and Babylonian inscriptions are used and flagged in each period’s basis. Borders are schematic, not surveyed.</p><p>Base map: Copernicus DEM (GLO-30) elevation and hillshade; Natural Earth 1:10m coastline, lakes and rivers. Ancient shorelines differ slightly from today’s (e.g. silting of the coastal plain).</p>'} },
   { t:{zh:'资料来源与体例',en:'Sources and Conventions'},
-    b:{zh:'<p>中文人名按和合本，英文按 NKJV／LSB 通行拼写；同一人在两国拼法不同时并列（Joram／Jehoram、Jehoash／Joash）。经文章节、年数、同步与父母名出自列王纪上下与历代志下。中文经文悬停显示和合本，点击在微读圣经打开；英文经文由 Logos Reftagger 悬停显示 LSB。</p><p>年代体系：MacArthur Study Bible（2nd ed.）列王纪导论所采用的 Thiele 式年代（含共治）。Edwin R. Thiele, <i>The Mysterious Numbers of the Hebrew Kings</i>；Leslie McFall 与 Rodger C. Young 的修订。出埃及：<i>Patterns of Evidence: Exodus</i>（Thinking Man Films）。</p>',
-       en:'<p>Chinese names follow the Chinese Union Version; English names follow the standard spelling of English Bibles (NKJV/LSB), with variants listed where the two kingdoms differ (Joram/Jehoram, Jehoash/Joash). Chapters, reign lengths, synchronisms and parentage come from 1–2 Kings and 2 Chronicles. Chinese references show the Chinese Union Version on hover and open in WD Bible; English references show the Legacy Standard Bible on hover via Logos Reftagger.</p><p>Chronology: the Thiele-type system with coregencies adopted in the MacArthur Study Bible (2nd ed.) introduction to Kings. Edwin R. Thiele, <i>The Mysterious Numbers of the Hebrew Kings</i>; revisions by Leslie McFall and Rodger C. Young. Exodus: <i>Patterns of Evidence: Exodus</i> (Thinking Man Films).</p>'} }
+    b:{zh:'<p>人名与地名依和合本；两国同名的王（约兰、约阿施、亚哈谢）以所属国区分。经文章节、年数、同步与父母名出自列王纪上下与历代志下。经文悬停显示和合本，点击在微读圣经打开。</p><p>年代体系：《麦克阿瑟研读本圣经》（第2版）列王纪导论所采用的蒂勒式年代（含共治）。埃德温·蒂勒《希伯来诸王的神秘数字》；莱斯利·麦克福尔与罗杰·扬的修订。出埃及年代参考纪录片《证据的模式：出埃及记》。</p>',
+       en:'<p>Names follow the standard spelling of English Bibles (NKJV/LSB); where the two kingdoms share a name, variants are listed (Joram/Jehoram, Jehoash/Joash). Chapters, reign lengths, synchronisms and parentage come from 1–2 Kings and 2 Chronicles. English references show the Legacy Standard Bible on hover via Logos Reftagger.</p><p>Chronology: the Thiele-type system with coregencies adopted in the MacArthur Study Bible (2nd ed.) introduction to Kings. Edwin R. Thiele, <i>The Mysterious Numbers of the Hebrew Kings</i>; revisions by Leslie McFall and Rodger C. Young. Exodus: <i>Patterns of Evidence: Exodus</i> (Thinking Man Films).</p>'} }
 ];
 
   </script>
@@ -1581,7 +1581,17 @@ const NOTES = [
   let selPin = null;
   const neLayers = {};
   const isZh = () => state.lang === 'zh';
-  const T = (o) => (o == null ? '' : (typeof o === 'string' ? o : (o[state.lang] ?? '')));
+  const zhFix = (s) => s.replace(/(\d[\d\/–\-]*\d|\d)\s*BC\b/g, '公元前$1年').replace(/\bc\.\s*(?=\d)/g, '约');
+  const T = (o) => { if (o == null) return ''; const v = typeof o === 'string' ? o : (o[state.lang] ?? ''); return (state.lang === 'zh' && typeof v === 'string') ? zhFix(v) : v; };
+  function Y(s, bc) {                                   // year label: "c. 970–931 BC" ⇄ "约公元前970–931年"
+    s = String(s == null ? '' : s);
+    if (state.lang !== 'zh') return bc ? s + ' BC' : s;
+    const approx = /^c\.\s*/.test(s);
+    let t = s.replace(/c\.\s*/g, '约');
+    if (!bc) return t;
+    t = t.replace(/^约/, '');
+    return (approx ? '约' : '') + '公元前' + t + '年';
+  }
   const eraById = (id) => ERAS.find(e => e.id === id);
   const placeById = (id) => PLACES.find(p => p[0] === id);
 
@@ -1929,9 +1939,9 @@ const NOTES = [
   function updateStatusUI() {
     const el = document.getElementById('text-ne'); if (!el) return;
     const L0 = {
-      loading: isZh() ? 'Natural Earth 1:10m 加载中…' : 'Loading Natural Earth 1:10m…',
-      ready: isZh() ? 'Natural Earth 1:10m 已就绪' : 'Natural Earth 1:10m ready',
-      fallback: isZh() ? 'Natural Earth 未能加载，使用简化海岸线' : 'Natural Earth unavailable — simplified coast',
+      loading: isZh() ? '自然地球 1:10m 加载中…' : 'Loading Natural Earth 1:10m…',
+      ready: isZh() ? '自然地球 1:10m 已就绪' : 'Natural Earth 1:10m ready',
+      fallback: isZh() ? '自然地球数据未能加载，使用简化海岸线' : 'Natural Earth unavailable — simplified coast',
       libError: isZh() ? '地图库未能加载，请刷新' : 'Map library failed to load — refresh',
       initError: isZh() ? '地图初始化失败' : 'Map failed to start'
     };
@@ -2238,7 +2248,7 @@ const NOTES = [
      ========================================================================= */
   function renderCartouche() {
     const e = eraById(state.era);
-    document.getElementById('cart-eyebrow').textContent = isZh() ? `第 ${e.id} 时期 · ${e.yrs} BC` : `Period ${e.id} · ${e.yrs} BC`;
+    document.getElementById('cart-eyebrow').textContent = isZh() ? `第 ${e.id} 时期 · ${Y(e.yrs, 1)}` : `Period ${e.id} · ${Y(e.yrs, 1)}`;
     document.getElementById('cart-title').textContent = T(e.title);
     const chg = state.step > 0 ? e.changes[state.step - 1] : null;
     document.getElementById('cart-step').innerHTML = chg ? `<b>${T(chg.yr)}</b> · ${T(chg.t)}` : (isZh() ? '时期开始时的版图' : 'Map at the start of the period');
@@ -2270,7 +2280,7 @@ const NOTES = [
       const on = e.id === state.era;
       return `<button onclick="window._era(${e.id})" class="era-chip flex flex-col items-start px-2 py-1 rounded-md border text-left transition-colors ${on ? 'bg-[#2b2520] text-[#faf6ec] border-[#2b2520]' : 'bg-[#faf6ec]/70 border-[#c8b89c] text-[#2b2520] hover:bg-[#faf6ec]'}" aria-pressed="${on}">
         <span class="text-[11px] font-bold leading-tight">${T(e.short)}</span>
-        <span class="text-[9.5px] leading-tight ${on ? 'text-[#e9dec6]' : 'text-[#6a5b49]'}">${e.yrs}</span></button>`;
+        <span class="text-[9.5px] leading-tight ${on ? 'text-[#e9dec6]' : 'text-[#6a5b49]'}">${Y(e.yrs)}</span></button>`;
     }).join('');
     const active = document.querySelector('#era-bar [aria-pressed="true"]');
     if (active) active.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: 'smooth' });
@@ -2310,7 +2320,7 @@ const NOTES = [
       html = `
         <div class="flex items-center justify-between gap-2 mb-1">
           <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-[#e9dec6] text-[#5c4a35]">${isZh() ? `第 ${e.id} 时期` : `Period ${e.id}`}</span>
-          <span class="text-[11px] text-[#6d5f4e] font-medium">${e.yrs} BC</span>
+          <span class="text-[11px] text-[#6d5f4e] font-medium">${Y(e.yrs, 1)}</span>
         </div>
         <h2 class="font-serif-atlas font-bold text-lg text-[#2b2520] leading-snug mb-1.5">${T(e.title)}</h2>
         <p class="${body()} text-[#2b2520] mb-2.5">${T(e.summary)}</p>
@@ -2326,7 +2336,7 @@ const NOTES = [
           ${[{ start: true }].concat(e.changes).map((c, i) => {
             const on = state.step === i;
             const title = c.start ? (isZh() ? '时期开始时的版图' : 'Map at the start of the period') : T(c.t);
-            const yr = c.start ? e.yrs : T(c.yr);
+            const yr = c.start ? Y(e.yrs) : T(c.yr);
             const bodyTxt = c.start
               ? (e.id === 1 ? (isZh() ? '大卫、所罗门奠定的版图：十二支派为本土，四围诸国进贡或设防，推罗为盟邦。' : 'The map David and Solomon established: the twelve tribes as the homeland, neighbouring states tributary or garrisoned, Tyre an ally.')
                             : (isZh() ? '承接上一时期结束时的版图。' : 'Carried over from the end of the previous period.'))
@@ -2351,10 +2361,10 @@ const NOTES = [
       html = `
         <div class="flex items-center justify-between gap-2 mb-1">
           <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full text-white" style="background:${r.c}">${r.t}</span>
-          <span class="text-[11px] text-[#6d5f4e] font-medium">${k.yrs} BC</span>
+          <span class="text-[11px] text-[#6d5f4e] font-medium">${Y(k.yrs, 1)}</span>
         </div>
         <div class="flex items-baseline flex-wrap gap-x-2 gap-y-0.5 mb-1.5">
-          <h2 class="font-serif-atlas font-bold text-xl leading-snug" style="color:${r.c}">${T(k)} <span class="text-[13px] font-semibold text-[#6a5b49]">${isZh() ? k.en : k.zh}</span></h2>
+          <h2 class="font-serif-atlas font-bold text-xl leading-snug" style="color:${r.c}">${T(k)}</h2>
           ${verdictBadge(k.verdict)}
         </div>
         ${k.alt ? `<div class="text-[11.5px] text-[#5c4a35] -mt-1 mb-1.5">${rich(T(k.alt))}</div>` : ''}
@@ -2381,11 +2391,11 @@ const NOTES = [
       html = `
         <div class="flex items-center justify-between gap-2 mb-1">
           <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-[#f5e0db] text-[#7c241b]">${isZh() ? '战役' : 'Battle'} ${w.n} / ${WARS.length}</span>
-          <span class="text-[11px] text-[#6d5f4e] font-medium">${w.yr} BC</span>
+          <span class="text-[11px] text-[#6d5f4e] font-medium">${Y(w.yr, 1)}</span>
         </div>
         <div class="flex items-baseline gap-2 mb-1.5">
           <span class="w-6 h-6 rounded-full text-xs font-bold text-white inline-flex items-center justify-center shrink-0 bg-[#B03A2E]">${w.n}</span>
-          <h2 class="font-serif-atlas font-bold text-lg text-[#2b2520] leading-snug">${T(w)} <span class="text-[13px] font-semibold text-[#6a5b49]">${isZh() ? w.en : w.zh}</span></h2>
+          <h2 class="font-serif-atlas font-bold text-lg text-[#2b2520] leading-snug">${T(w)}</h2>
         </div>
         <p class="${body()} text-[#2b2520] mb-2">${rich(T(w.d))}</p>
         <div class="text-[11.5px] text-[#5c4a35] mb-2.5">${w.refs ? `${isZh() ? '经文：' : 'Scripture: '}${refHTML(w.refs)}` : (isZh() ? '圣经未载；见亚述铭文' : 'Not recorded in Scripture; Assyrian inscription')}</div>
@@ -2400,9 +2410,9 @@ const NOTES = [
       html = `
         <div class="flex items-center justify-between gap-2 mb-1">
           <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full text-white" style="background:${a.c}">${T(a)}</span>
-          <span class="text-[11px] text-[#6d5f4e] font-medium">${p.yrs} BC</span>
+          <span class="text-[11px] text-[#6d5f4e] font-medium">${Y(p.yrs, 1)}</span>
         </div>
-        <h2 class="font-serif-atlas font-bold text-lg text-[#2b2520] leading-snug">${T(p)} <span class="text-[13px] font-semibold text-[#6a5b49]">${isZh() ? p.en : p.zh}</span></h2>
+        <h2 class="font-serif-atlas font-bold text-lg text-[#2b2520] leading-snug">${T(p)}</h2>
         <div class="text-[11.5px] text-[#5c4a35] mb-2">${T(p.who)}</div>
         <p class="${body()} text-[#2b2520] mb-2">${rich(T(p.msg))}</p>
         <dl class="kv mb-2">
@@ -2418,9 +2428,9 @@ const NOTES = [
       html = `
         <div class="flex items-center justify-between gap-2 mb-1">
           <span class="text-[11px] font-semibold px-2 py-0.5 rounded-full bg-[#e9dec6] text-[#5c4a35]">${isZh() ? '列王纪中的先知' : 'Prophet in Kings'}</span>
-          <span class="text-[11px] text-[#6d5f4e] font-medium">${p.yr} BC</span>
+          <span class="text-[11px] text-[#6d5f4e] font-medium">${Y(p.yr, 1)}</span>
         </div>
-        <h2 class="font-serif-atlas font-bold text-lg text-[#2b2520] leading-snug mb-1.5">${T(p)} <span class="text-[13px] font-semibold text-[#6a5b49]">${isZh() ? p.en : p.zh}</span></h2>
+        <h2 class="font-serif-atlas font-bold text-lg text-[#2b2520] leading-snug mb-1.5">${T(p)}</h2>
         <p class="${body()} text-[#2b2520] mb-2">${rich(T(p.d))}</p>
         <div class="text-[11.5px] text-[#5c4a35] mb-2.5">${isZh() ? '经文：' : 'Scripture: '}${refHTML(p.refs)}</div>
         ${eraChip(eraForYear(p.s))}`;
@@ -2465,7 +2475,7 @@ const NOTES = [
         return `<button id="row-era-${e.id}" onclick="window._era(${e.id})" class="${rowCls(on || (s.type !== 'era' && state.era === e.id))} mb-1">
           <span class="w-5 h-5 mt-0.5 rounded-full text-[10px] font-bold text-[#faf6ec] bg-[#5c4a35] flex items-center justify-center shrink-0">${e.id}</span>
           <span class="min-w-0 flex-1"><span class="flex items-baseline justify-between gap-1"><span class="text-[12.5px] font-bold text-[#2b2520]">${T(e.title)}</span></span>
-          <span class="block text-[10.5px] text-[#7a6955]">${e.yrs} BC</span></span></button>`;
+          <span class="block text-[10.5px] text-[#7a6955]">${Y(e.yrs, 1)}</span></span></button>`;
       }).join('');
     } else if (state.tab === 'kings') {
       const block = (realm, title, color) => {
@@ -2476,15 +2486,15 @@ const NOTES = [
             <span class="w-6 text-[10.5px] font-bold text-right shrink-0 mt-0.5" style="color:${color}">${k.n}</span>
             <span class="min-w-0 flex-1"><span class="flex items-baseline justify-between gap-1">
               <span class="text-[12.5px] font-bold truncate" style="color:${color}">${T(k)}${k.alt ? `<span class="font-normal text-[10.5px] text-[#6a5b49]"> · ${T(k.alt).replace(/\[\[.*?\]\]/g, '').trim()}</span>` : ''}</span>
-              <span class="text-[10.5px] text-[#6a5b49] shrink-0">${k.yrs}</span></span>
+              <span class="text-[10.5px] text-[#6a5b49] shrink-0">${Y(k.yrs)}</span></span>
               <span class="block text-[10.5px] text-[#7a6955] truncate">${rich(T(k.reign)).replace(/<[^>]+>/g, '')}${realm === 'i' && k.dyn ? ` · ${T(DYN[k.dyn])}` : ''}</span></span>
             ${k.verdict !== 'none' ? `<span class="shrink-0 mt-0.5">${verdictBadge(k.verdict)}</span>` : ''}</button>`;
         });
         return h;
       };
       html = block('u', isZh() ? '联合王国：大卫与所罗门' : 'United Monarchy: David and Solomon', STY.united.c)
-        + block('j', isZh() ? '南国犹大（931–586 BC）· 金色为经文评为“行耶和华眼中看为正的事”的善王' : 'Judah (931–586 BC) · gold: kings who “did right in the sight of Yahweh”', STY.judah.c)
-        + block('i', isZh() ? '北国以色列（931–722 BC）· 9个王朝' : 'Israel (931–722 BC) · nine dynasties', STY.israel.c);
+        + block('j', isZh() ? '南国犹大（公元前931–586年）· 金色为经文评为“行耶和华眼中看为正的事”的善王' : 'Judah (931–586 BC) · gold: kings who “did right in the sight of Yahweh”', STY.judah.c)
+        + block('i', isZh() ? '北国以色列（公元前931–722年）· 9个王朝' : 'Israel (931–722 BC) · nine dynasties', STY.israel.c);
     } else if (state.tab === 'wars') {
       let cur = 0;
       WARS.forEach(w => {
@@ -2492,7 +2502,7 @@ const NOTES = [
         const on = s.type === 'war' && s.id === w.n;
         html += `<button id="row-war-${w.n}" onclick="window._war(${w.n})" class="${rowCls(on)} mb-0.5">
           <span class="w-5 h-5 mt-0.5 rounded-full text-[10px] font-bold text-white bg-[#B03A2E] flex items-center justify-center shrink-0">${w.n}</span>
-          <span class="min-w-0 flex-1"><span class="flex items-baseline justify-between gap-1"><span class="text-[12.5px] font-bold text-[#2b2520] truncate">${T(w)}</span><span class="text-[10.5px] text-[#6a5b49] shrink-0">${w.yr}</span></span></span></button>`;
+          <span class="min-w-0 flex-1"><span class="flex items-baseline justify-between gap-1"><span class="text-[12.5px] font-bold text-[#2b2520] truncate">${T(w)}</span><span class="text-[10.5px] text-[#6a5b49] shrink-0">${Y(w.yr)}</span></span></span></button>`;
       });
     } else if (state.tab === 'prophets') {
       html += groupHead(isZh() ? '写作先知（大先知书4卷 · 小先知书12卷）' : 'The Writing Prophets (4 major · 12 minor)', '#5c4a35');
@@ -2501,7 +2511,7 @@ const NOTES = [
         const on = s.type === 'prophet' && s.id === p.id;
         html += `<button id="row-prophet-${p.id}" onclick="window._prophet('${p.id}')" class="${rowCls(on)} mb-0.5">
           <i class="inline-block w-2.5 h-2.5 mt-1.5 rounded-full shrink-0" style="background:${AUD[p.aud].c}"></i>
-          <span class="min-w-0 flex-1"><span class="flex items-baseline justify-between gap-1"><span class="text-[12.5px] font-bold text-[#2b2520] truncate">${T(p)}</span><span class="text-[10.5px] text-[#6a5b49] shrink-0">${p.yrs}</span></span>
+          <span class="min-w-0 flex-1"><span class="flex items-baseline justify-between gap-1"><span class="text-[12.5px] font-bold text-[#2b2520] truncate">${T(p)}</span><span class="text-[10.5px] text-[#6a5b49] shrink-0">${Y(p.yrs)}</span></span>
           <span class="block text-[10.5px] text-[#7a6955] truncate">${T(p.kings)} · ${T(p.to)}</span></span></button>`;
       });
       html += groupHead(isZh() ? '列王纪中其他先知（未留下书卷）' : 'Other prophets in Kings (no book)', '#5c4a35');
@@ -2509,7 +2519,7 @@ const NOTES = [
         const on = s.type === 'other' && s.id === p.id;
         html += `<button id="row-other-${p.id}" onclick="window._other('${p.id}')" class="${rowCls(on)} mb-0.5">
           <i class="inline-block w-2.5 h-2.5 mt-1.5 rounded-full shrink-0 border border-[#8b7b65]"></i>
-          <span class="min-w-0 flex-1"><span class="flex items-baseline justify-between gap-1"><span class="text-[12.5px] font-bold text-[#2b2520] truncate">${T(p)}</span><span class="text-[10.5px] text-[#6a5b49] shrink-0">${p.yr}</span></span></span></button>`;
+          <span class="min-w-0 flex-1"><span class="flex items-baseline justify-between gap-1"><span class="text-[12.5px] font-bold text-[#2b2520] truncate">${T(p)}</span><span class="text-[10.5px] text-[#6a5b49] shrink-0">${Y(p.yr)}</span></span></span></button>`;
       });
     } else if (state.tab === 'timeline') {
       html = buildTimeline();
@@ -2594,7 +2604,7 @@ const NOTES = [
       });
       layoutLabels(items, 10.5).forEach(it => {
         const lead = Math.abs(it.at - it.want) > 2 ? `<path d="M${it.bxl + 7} ${(it.y1 + it.y2) / 2} L${lx - 3} ${it.at - 3}" stroke="${it.col}" stroke-width="0.5" fill="none" opacity="0.6"/>` : '';
-        g += `<g class="tl-hit" onclick="window._king('${it.k.id}')" ${it.sel ? 'data-sel="1"' : ''}><title>${T(it.k)} ${it.k.yrs}</title>${it.bar}${lead}<text x="${lx}" y="${it.at}" font-size="9.5" fill="${it.col}" font-weight="${it.sel ? 700 : 600}">${T(it.k)}${it.sel ? ' ◀' : ''}</text></g>`;
+        g += `<g class="tl-hit" onclick="window._king('${it.k.id}')" ${it.sel ? 'data-sel="1"' : ''}><title>${T(it.k)} ${Y(it.k.yrs)}</title>${it.bar}${lead}<text x="${lx}" y="${it.at}" font-size="9.5" fill="${it.col}" font-weight="${it.sel ? 700 : 600}">${T(it.k)}${it.sel ? ' ◀' : ''}</text></g>`;
       });
     };
     kingCol('j', 48, 68);
@@ -2611,11 +2621,11 @@ const NOTES = [
     });
     layoutLabels(pItems, 10.5).forEach(it => {
       const c = AUD[it.p.aud].c;
-      g += `<g class="tl-hit" onclick="window._prophet('${it.p.id}')" ${it.sel ? 'data-sel="1"' : ''}><title>${T(it.p)} ${it.p.yrs}</title><rect x="${it.x}" y="${it.y1}" width="5" height="${it.y2 - it.y1}" rx="1" fill="${c}" ${it.p.q ? 'opacity="0.55"' : ''} ${it.sel ? 'stroke="#2b2520" stroke-width="1.4"' : ''}/>
-        <text x="276" y="${it.at}" font-size="9" fill="${c}" font-weight="${it.sel ? 700 : 600}">${zh ? T(it.p).replace(/书.*$/, '') : it.p.en.replace(' + Lamentations', '')}${it.sel ? ' ◀' : ''}</text></g>`;
+      g += `<g class="tl-hit" onclick="window._prophet('${it.p.id}')" ${it.sel ? 'data-sel="1"' : ''}><title>${T(it.p)} ${Y(it.p.yrs)}</title><rect x="${it.x}" y="${it.y1}" width="5" height="${it.y2 - it.y1}" rx="1" fill="${c}" ${it.p.q ? 'opacity="0.55"' : ''} ${it.sel ? 'stroke="#2b2520" stroke-width="1.4"' : ''}/>
+        <text x="276" y="${it.at}" font-size="9" fill="${c}" font-weight="${it.sel ? 700 : 600}">${T(it.p)}${it.sel ? ' ◀' : ''}</text></g>`;
     });
     const caption = zh
-      ? '纵轴为年代（BC，自上而下）。浅色段为共治或对立王期间；金色为善王。点击任一王、先知或左侧时期色带即可在地图上定位。'
+      ? '纵轴为年代（公元前，自上而下）。浅色段为共治或对立王期间；金色为善王。点击任一王、先知或左侧时期色带即可在地图上定位。'
       : 'Years BC run downward. Pale segments mark coregencies or rival reigns; gold marks the good kings. Click any king, prophet or the period band to locate it on the map.';
     return `<p class="${body('text-[11px] leading-relaxed', 'font-serif-atlas text-[12.5px] leading-snug')} text-[#5c4a35] px-1 pb-1.5">${caption}</p>
       <svg id="timeline-svg" viewBox="0 0 ${W} ${H}" width="100%" style="display:block">${g}</svg>`;
@@ -2646,6 +2656,7 @@ const NOTES = [
     const pz = document.getElementById('lang-pill-zh'), pe = document.getElementById('lang-pill-en');
     (zh ? pz : pe).classList.add(...on); (zh ? pz : pe).classList.remove(...off);
     (zh ? pe : pz).classList.remove(...on); (zh ? pe : pz).classList.add(...off);
+    document.getElementById('btn-lang-toggle').title = zh ? '切换到英文' : 'Switch to Chinese';
     hideTip(); setEra(state.era, state.step); updateButtons(); updateStatusUI(); renderTabs(); renderLegend(); renderEraBar(); renderWars(); renderDetail(); renderList(true);
     syncLegend();
   }
