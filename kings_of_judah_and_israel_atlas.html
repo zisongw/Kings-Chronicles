@@ -1670,13 +1670,17 @@ const NOTES = [
         return `${sepTxt}<a class="sc-zh" href="${href}" target="_blank" rel="noopener noreferrer" data-b="${GB_NR[r.book]}" data-sc="${r.sc}" data-sv="${r.sv ?? ''}" data-ec="${r.ec ?? ''}" data-ev="${r.ev ?? ''}" data-full="${full}">${label}</a>`;
       }).join('');
     }
-    // English: LSB — plain reference text, tagged by Logos Reftagger
+    // English: LSB — each reference is a Logos (ref.ly) link; Reftagger adds the LSB hover
     const txt = refs.map(r => {
       const B = BOOKS[r.book], single = B[4] === 1;
       const sepTxt = r.sep === ';' ? '; ' : (r.sep === ',' ? ', ' : '');
       let lab = refLabel(r, !r.cont).replace(/–/g, '-');
       if (single && !r.cont) lab = '1:' + lab;
-      return sepTxt + (r.showBook ? B[2] + ' ' : '') + lab;
+      const label = (r.showBook ? B[2] + ' ' : '') + lab;
+      let full = refLabel(r, true).replace(/–/g, '-');
+      if (single) full = '1:' + full;
+      const href = `https://ref.ly/${encodeURIComponent(B[3] + ' ' + full)};lsb`;
+      return `${sepTxt}<a class="sc-en-ref" href="${href}" target="_blank" rel="noopener noreferrer" data-ref="${B[3]} ${full}">${label}</a>`;
     }).join('');
     return `<span class="sc-en">${txt}</span>`;
   }
@@ -1779,7 +1783,7 @@ const NOTES = [
 
   /* English: Logos Reftagger (LSB) */
   window.refTagger = { settings: {
-    bibleVersion: 'LSB', socialSharing: [], tooltipStyle: 'light', roundCorners: true,
+    bibleVersion: 'LSB', socialSharing: [], tooltipStyle: 'light', roundCorners: true, convertHyperlinks: true, tagChapters: true,
     noSearchClassNames: ['sc-zh', 'no-rt', 'leaflet-container'],
     customStyle: { heading: { backgroundColor: '#efe5cf', color: '#2b2520' }, body: { color: '#2b2520' } }
   } };
@@ -2383,7 +2387,7 @@ const NOTES = [
           <h2 class="font-serif-atlas font-bold text-lg text-[#2b2520] leading-snug">${T(w)} <span class="text-[13px] font-semibold text-[#6a5b49]">${isZh() ? w.en : w.zh}</span></h2>
         </div>
         <p class="${body()} text-[#2b2520] mb-2">${rich(T(w.d))}</p>
-        <div class="text-[11.5px] text-[#5c4a35] mb-2.5">${w.refs ? `${isZh() ? '经文' : 'Scripture'}：${refHTML(w.refs)}` : (isZh() ? '圣经未载；见亚述铭文' : 'Not recorded in Scripture; Assyrian inscription')}</div>
+        <div class="text-[11.5px] text-[#5c4a35] mb-2.5">${w.refs ? `${isZh() ? '经文：' : 'Scripture: '}${refHTML(w.refs)}` : (isZh() ? '圣经未载；见亚述铭文' : 'Not recorded in Scripture; Assyrian inscription')}</div>
         <div class="flex items-center justify-between">${eraChip(w.era)}
           <div class="flex gap-1">
             ${w.n > 1 ? `<button onclick="window._war(${w.n - 1})" class="text-[10.5px] px-1.5 py-0.5 rounded border border-[#c8b89c] bg-[#faf6ec] hover:bg-[#efe5cf]">◀ ${w.n - 1}</button>` : ''}
@@ -2417,7 +2421,7 @@ const NOTES = [
         </div>
         <h2 class="font-serif-atlas font-bold text-lg text-[#2b2520] leading-snug mb-1.5">${T(p)} <span class="text-[13px] font-semibold text-[#6a5b49]">${isZh() ? p.en : p.zh}</span></h2>
         <p class="${body()} text-[#2b2520] mb-2">${rich(T(p.d))}</p>
-        <div class="text-[11.5px] text-[#5c4a35] mb-2.5">${isZh() ? '经文' : 'Scripture'}：${refHTML(p.refs)}</div>
+        <div class="text-[11.5px] text-[#5c4a35] mb-2.5">${isZh() ? '经文：' : 'Scripture: '}${refHTML(p.refs)}</div>
         ${eraChip(eraForYear(p.s))}`;
     }
     if (!state.detailOpen) {
