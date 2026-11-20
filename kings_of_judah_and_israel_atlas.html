@@ -1673,10 +1673,11 @@ const NOTES = [
     // English: LSB — each reference is a Logos (ref.ly) link; Reftagger adds the LSB hover
     const txt = refs.map(r => {
       const B = BOOKS[r.book], single = B[4] === 1;
-      const sepTxt = r.sep === ';' ? '; ' : (r.sep === ',' ? ', ' : '');
-      let lab = refLabel(r, !r.cont).replace(/–/g, '-');
-      if (single && !r.cont) lab = '1:' + lab;
-      const label = (r.showBook ? B[2] + ' ' : '') + lab;
+      const sepTxt = r.sep ? '; ' : '';
+      // always spell out book + chapter:verse so Reftagger can resolve the hover for every reference
+      let lab = refLabel(r, true).replace(/–/g, '-');
+      if (single) lab = '1:' + lab;
+      const label = B[2] + ' ' + lab;
       let full = refLabel(r, true).replace(/–/g, '-');
       if (single) full = '1:' + full;
       const href = `https://ref.ly/${encodeURIComponent(B[3] + ' ' + full)};lsb`;
